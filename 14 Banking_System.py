@@ -2,8 +2,10 @@ import random
 from datetime import datetime
 import json
 
+# initialize an empty dictionary to store transactions
 trans = {}
 
+# load data from a json file to the transactions dictionary
 def load_data(trans):
     try:
         with open("transactions.json") as file:
@@ -11,6 +13,7 @@ def load_data(trans):
     except FileNotFoundError:
         print("File not found")
 
+# class for transactions
 class Transactions:
     def __init__(self, amount, transaction_type):
         self.date = datetime.now()
@@ -20,6 +23,7 @@ class Transactions:
     def __str__(self):
         return f"{self.date} - {self.amount}$ - {self.transaction_type}"
 
+# function to generate a random account number betwwen 10000 and 99999.
 def random_account_number():
     """Function that generates a random account number"""
     return random.randint(10000, 99999)
