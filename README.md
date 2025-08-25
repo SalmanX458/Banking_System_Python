@@ -4,3 +4,4 @@
 
 - added github actions yaml file
 - created two job workflows o push and on pull
+- i had two workflows running at same time so a conflict occured
